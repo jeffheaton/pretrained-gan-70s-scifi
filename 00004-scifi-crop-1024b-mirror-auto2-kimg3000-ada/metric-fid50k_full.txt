@@ -1,0 +1,16 @@
+network-snapshot-000000        time 22m 03s      fid50k_full 336.9290
+network-snapshot-000200        time 11m 37s      fid50k_full 92.3286
+network-snapshot-000400        time 11m 57s      fid50k_full 50.1593
+network-snapshot-000600        time 11m 17s      fid50k_full 38.8136
+network-snapshot-000800        time 11m 19s      fid50k_full 31.8282
+network-snapshot-001000        time 11m 19s      fid50k_full 26.8630
+network-snapshot-001200        time 11m 19s      fid50k_full 25.8816
+network-snapshot-001400        time 11m 18s      fid50k_full 22.4023
+network-snapshot-001600        time 11m 17s      fid50k_full 22.0434
+network-snapshot-001800        time 11m 20s      fid50k_full 20.4564
+network-snapshot-002000        time 11m 19s      fid50k_full 20.7068
+network-snapshot-002200        time 11m 17s      fid50k_full 19.4774
+network-snapshot-002400        time 11m 22s      fid50k_full 19.0859
+network-snapshot-002600        time 11m 18s      fid50k_full 18.6289
+network-snapshot-002800        time 11m 20s      fid50k_full 18.1007
+network-snapshot-003000        time 11m 19s      fid50k_full 18.7702

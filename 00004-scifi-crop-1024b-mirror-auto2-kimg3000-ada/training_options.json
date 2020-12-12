@@ -1,0 +1,88 @@
+{
+  "G_args": {
+    "func_name": "training.networks.G_main",
+    "fmap_base": 16384,
+    "fmap_max": 512,
+    "mapping_layers": 2,
+    "num_fp16_res": 4,
+    "conv_clamp": 256
+  },
+  "D_args": {
+    "func_name": "training.networks.D_main",
+    "mbstd_group_size": 4,
+    "fmap_base": 16384,
+    "fmap_max": 512,
+    "num_fp16_res": 4,
+    "conv_clamp": 256
+  },
+  "G_opt_args": {
+    "beta1": 0.0,
+    "beta2": 0.99,
+    "learning_rate": 0.002
+  },
+  "D_opt_args": {
+    "beta1": 0.0,
+    "beta2": 0.99,
+    "learning_rate": 0.002
+  },
+  "loss_args": {
+    "func_name": "training.loss.stylegan2",
+    "r1_gamma": 26.2144
+  },
+  "augment_args": {
+    "class_name": "training.augment.AdaptiveAugment",
+    "tune_heuristic": "rt",
+    "tune_target": 0.6,
+    "apply_func": "training.augment.augment_pipeline",
+    "apply_args": {
+      "xflip": 1,
+      "rotate90": 1,
+      "xint": 1,
+      "scale": 1,
+      "rotate": 1,
+      "aniso": 1,
+      "xfrac": 1,
+      "brightness": 1,
+      "contrast": 1,
+      "lumaflip": 1,
+      "hue": 1,
+      "saturation": 1
+    }
+  },
+  "num_gpus": 2,
+  "image_snapshot_ticks": 50,
+  "network_snapshot_ticks": 50,
+  "train_dataset_args": {
+    "path": "/mnt/datasets/scifi-crop-1024b",
+    "max_label_size": 0,
+    "resolution": 1024,
+    "mirror_augment": true
+  },
+  "metric_arg_list": [
+    {
+      "name": "fid50k_full",
+      "class_name": "metrics.frechet_inception_distance.FID",
+      "max_reals": null,
+      "num_fakes": 50000,
+      "minibatch_per_gpu": 8,
+      "force_dataset_args": {
+        "shuffle": false,
+        "max_images": null,
+        "repeat": false,
+        "mirror_augment": false
+      }
+    }
+  ],
+  "metric_dataset_args": {
+    "path": "/mnt/datasets/scifi-crop-1024b",
+    "max_label_size": 0,
+    "resolution": 1024,
+    "mirror_augment": true
+  },
+  "total_kimg": 3000,
+  "minibatch_size": 8,
+  "minibatch_gpu": 4,
+  "G_smoothing_kimg": 2.5,
+  "G_smoothing_rampup": 0.05,
+  "run_dir": "/mnt/results/00004-scifi-crop-1024b-mirror-auto2-kimg3000-ada"
+}
