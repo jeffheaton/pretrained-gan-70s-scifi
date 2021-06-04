@@ -4,6 +4,7 @@
 * Copyright 2020 [Jeff Heaton](https://www.heatonresearch.com/), [MIT License](https://opensource.org/licenses/MIT)
 
 I created a GAN neural network to generate 70s-Style sci-fi images at 1024x1024 resolution.  The results of this training are contained in the Git repository.  
+* [Demo and Docker image on Replicate](https://replicate.ai/jeffheaton/pretrained-gan-70s-scifi)
 
 Other resources:
 

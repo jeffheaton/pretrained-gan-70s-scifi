@@ -1,0 +1,14 @@
+predict: "predict.py:Predictor"
+build:
+  gpu: true
+  python_version: "3.7"
+  python_packages:
+    - "tensorflow==1.15.0"
+    - "opencv-python==4.5.1.48"
+    - "scipy==1.6.3"
+    - "pillow==8.2.0"
+  system_packages:
+    - "libgl1-mesa-dev"
+    - "libglib2.0-0"
+  pre_install:
+    - "git clone https://github.com/NVlabs/stylegan2-ada.git"
